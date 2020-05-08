@@ -1,3 +1,15 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+login:
+    path: /login
+    controller: App\Controller\LoginIndex::login
+
+index:
+    path: /{param}
+    controller: App\Controller\Index::index
+    defaults:
+        param: 'projects'
+    requirements:
+        param: '.+'
